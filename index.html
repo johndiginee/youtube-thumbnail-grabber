@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download YouTube Thumbnail</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+</head>
+
+<body>
+    <div class="main fw-light">
+        <header>
+            <h4 class="display-6 lh-1">Download YouTube Thumbnail</h4>
+        </header>
+        <hr>
+        <label for="url" class="form-label small">Just paste the URL of the video in the below input and click on any of the button below!</label>
+        <input name="url" type="search" id="url" class="form-control fw-light"
+            onfocus="if(this.value == 'https://www.youtube.com/watch?v=BGym3wSPDhw') { this.value = ''; }"
+            onblur="if(this.value == '') { this.value = 'https://www.youtube.com/watch?v=BGym3wSPDhw'; }"
+            value="https://www.youtube.com/watch?v=BGym3wSPDhw" />
+        <div class="buttons">
+            <button class="btn btn-success fw-light" onclick="dynamicUrl(0)">Normal Image (480x360)</button>
+            <button class="btn btn-success fw-light" onclick="dynamicUrl(1)">SD Image (640x480)</button>
+            <button class="btn btn-success fw-light" onclick="download()">Download Max</button>
+        </div>
+
+        <img class="center-fit" id="img" onclick="fullPage()" title="Click to zoom in/out"
+            src="https://img.youtube.com/vi/BGym3wSPDhw/maxresdefault.jpg" />
+    </div>
+    <div id="fullpage" title="Click to zoom in/out" onclick="this.style.display='none';"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
