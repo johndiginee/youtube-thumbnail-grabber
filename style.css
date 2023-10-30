@@ -13,10 +13,12 @@ body {
     background-color: black!important;
     
 }
-
-.fw-light{
+.form-label, h4, header{
     color: #fff!important;
-    font-weight:700;
+    font-weight:500;
+}
+input, textarea{
+    color: #000!important;
 }
 .main {
     margin: auto;
